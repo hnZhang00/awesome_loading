@@ -1,0 +1,54 @@
+@circle-width: 50px;
+@circle-width-half: @circle-width/2;
+@circle-radius-width: 6px;
+
+.circle{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &-text{
+    margin-top: 100px;
+    color: #333;
+    font-size: 15px;
+  }
+  &-inner{
+    width: @circle-width;
+    height: @circle-width;
+    position: absolute;
+    top: e('calc(50% - @circle-width)');
+    left: e('calc(50% - @circle-width)');
+    &:before, &:after {
+      width: @circle-width-half;
+      height: @circle-width;
+      border: @circle-radius-width solid #00b1fb;
+      box-sizing: border-box;
+      position: absolute;
+      content: '';
+    }
+    &:before{
+      border-right: none;
+      border-radius: 100px 0 0 100px;
+      top: 0;
+      left: 0;
+      transform-origin: right center;
+      animation: circle-rotate 2s infinite ease 1.5s;
+    }
+    &:after{
+      border-left: none;
+      border-radius: 0 100px 100px 0;
+      top: 0;
+      right: 0;
+      transform-origin: center left;
+      animation: circle-rotate 2s infinite ease;
+    }
+  }
+}
+@keyframes circle-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

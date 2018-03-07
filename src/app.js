@@ -2,6 +2,7 @@ import './style/app.less';
 import './index.html';
 
 import Components from 'components/components';
+import Loading from 'components/loading';
 
 var indexModule = {
   init() {
@@ -14,9 +15,12 @@ var indexModule = {
     for(var i=0; i<navbarLists.length; i++){
       let item = navbarLists[i];
       let type = item.getAttribute('type');
-      if(Components.types.indexOf(type) === -1)
-        return;
       item.onclick = function(e){
+        if(Components.types.indexOf(type) === -1){
+          let loading = new Loading;
+          loading.destory();
+          return;
+        }
         Components[type].init();
       }
     }
