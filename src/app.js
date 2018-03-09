@@ -9,6 +9,7 @@ var indexModule = {
     this.bindEvent();
   },
   bindEvent(){
+    Components['float'].init();
     let navbarLists = document.getElementsByClassName('navbar-list');
     if(!navbarLists || !navbarLists.length)
       return;

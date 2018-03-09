@@ -1,0 +1,98 @@
+.float{
+  width: 700px;
+  height: 700px;
+  position: relative;
+  &-circle{
+    border-radius: 50%;
+    margin: 10px;
+    // opacity: 0;
+    animation: circle-float 1550ms infinite linear;
+    position: absolute;
+    &.no1{
+      width: 20px;
+      height: 20px;
+      bottom: 0;
+      left: 0;
+      background: #48D5C3;
+    }
+    &.no2{
+      width: 40px;
+      height: 40px;
+      left: 50px;
+      bottom: 30px;
+      background: #48B34F;
+    }
+    &.no3{
+      width: 30px;
+      height: 30px;
+      left: 110px;
+      bottom: 50px;
+      background: #54AEFC;
+    }
+    &.no4{
+      width: 20px;
+      height: 20px;
+      left: 160px;
+      bottom: 0;
+      background: #1EB2F8;
+    }
+    &.no5{
+      width: 30px;
+      height: 30px;
+      left: 210px;
+      bottom: 100px;
+      background: #3D75BC;
+    }
+    &.no6{
+      width: 40px;
+      height: 40px;
+      left: 280px;
+      bottom: 50px;
+      background: #FD9827;
+    }
+    &.no7{
+      width: 60px;
+      height: 60px;
+      left: 370px;
+      bottom: 120px;
+      background: #B4DAFD;
+    }
+    &.no8{
+      width: 50px;
+      height: 50px;
+      left: 480px;
+      bottom: 10px;
+      background: #FEC0CB;
+    }
+    &.no9{
+      width: 30px;
+      height: 30px;
+      left: 580px;
+      bottom: -10px;
+      background: #7AC149;
+    }
+  }
+}
+
+@keyframes circle-float {
+  0 {
+    opacity: 0;
+    margin-left: 0;
+    bottom: 0;
+  }
+  50% {
+    opacity: 1;
+    margin-left: -20px;
+    bottom: 50%;
+  }
+  70% {
+    opacity: 0.5;
+    margin-left: 0;
+    bottom: 70%;
+  }
+  100% {
+    opacity: 0;
+    margin-left: 10px;
+    bottom: 100%;
+  }
+}
