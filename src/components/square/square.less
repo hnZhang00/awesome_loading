@@ -1,0 +1,108 @@
+.square{
+  width: 70px;
+  height: 70px;
+  // background: #e3e3e3;
+  transform: rotate(45deg);
+  position: relative;
+  &-block{
+    width: 35px;
+    height: 35px;
+    background: #48D5C3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    &.first{
+      // background: #48D5C3;
+      animation: square-rotate1 800ms infinite ease-in-out;
+    }
+    &.sec{
+      left: 35px;
+      // background: #54AEFC;
+      animation: square-rotate2 800ms infinite ease-in-out;
+    }
+    &.third{
+      top: 35px;
+      // background: #FD9827;
+      animation: square-rotate3 800ms infinite ease-in-out;
+    }
+    &.forth{
+      top: 35px;
+      left: 35px;
+      // background: #3D75BC;
+      animation: square-rotate4 800ms infinite ease-in-out;
+    }
+  }
+}
+
+@keyframes square-rotate1 {
+  0 {
+    top: 0;
+    left: 0;
+  }
+  50% {
+    top: -35px;
+    left: -35px;
+  }
+  80%{
+    transform: rotate(180deg);
+  }
+  100% {
+    top: 0;
+    left: 0;
+    transform: rotate(180deg);
+  }
+}
+@keyframes square-rotate2 {
+  0 {
+    top: 0;
+    left: 35px;
+  }
+  50% {
+    top: -35px;
+    left: 70px;
+  }
+  80%{
+    transform: rotate(180deg);
+  }
+  100% {
+    top: 0;
+    left: 35px;
+    transform: rotate(180deg);
+  }
+}
+@keyframes square-rotate3 {
+  0 {
+    top: 35px;
+    left: 0;
+  }
+  50% {
+    top: 70px;
+    left: -35px;
+  }
+  80%{
+    transform: rotate(180deg);
+  }
+  100% {
+    top: 35px;
+    left: 0;
+    transform: rotate(180deg);
+  }
+}
+@keyframes square-rotate4 {
+  0 {
+    top: 35px;
+    left: 35px;
+  }
+  50% {
+    top: 70px;
+    left: 70px;
+  }
+  80%{
+    transform: rotate(180deg);
+  }
+  100% {
+    top: 35px;
+    left: 35px;
+    transform: rotate(180deg);
+  }
+}
