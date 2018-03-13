@@ -1,0 +1,121 @@
+.squareInline{
+  width: 140px;
+  height: 30px;
+  // background: #e3e3e3;
+  position: relative;
+  &-block{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    background: #3D75BC;
+    &.first{
+      top: 0;
+      left: 0;
+      animation: squareInline-move1 1000ms infinite ease-in-out;
+    }
+    &.sec{
+      top: 0;
+      left: 35px;
+      animation: squareInline-move2 1000ms infinite ease-in-out;
+    }
+    &.third{
+      top: 0;
+      left: 70px;
+      animation: squareInline-move3 1000ms infinite ease-in-out;
+    }
+    &.forth{
+      top: 0;
+      left: 105px;
+      animation: squareInline-move4 1000ms infinite ease-in-out;
+    }
+  }
+}
+
+@keyframes squareInline-move1{
+  0 {
+    top: 0;
+    left: 0;
+  }
+  25% {
+    top: 0;
+    left: 40px;
+  }
+  50% {
+    top: -15px;
+    left: 40px;
+  }
+  75% {
+    top: 0;
+    left: 40px;
+  }
+  100% {
+    top: 0;
+    left: 0;
+  }
+}
+@keyframes squareInline-move2{
+  0 {
+    top: 0;
+    left: 35px;
+  }
+  25% {
+    top: 0;
+    left: 70px;
+  }
+  50% {
+    top: -15px;
+    left: 70px;
+  }
+  75% {
+    top: 0;
+    left: 70px;
+  }
+  100% {
+    top: 0;
+    left: 35px;
+  }
+}
+@keyframes squareInline-move3{
+  0 {
+    top: 0;
+    left: 70px;
+  }
+  25% {
+    top: 0;
+    left: 40px;
+  }
+  50% {
+    top: 15px;
+    left: 40px;
+  }
+  75% {
+    top: 0;
+    left: 40px;
+  }
+  100% {
+    top: 0;
+    left: 70px;
+  }
+}
+@keyframes squareInline-move4{
+  0 {
+    top: 0;
+    left: 105px;
+  }
+  25% {
+    top: 0;
+    left: 70px;
+  }
+  50% {
+    top: 15px;
+    left: 70px;
+  }
+  75% {
+    top: 0;
+    left: 70px;
+  }
+  100% {
+    top: 0;
+    left: 105px;
+  }
+}

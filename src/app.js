@@ -9,7 +9,7 @@ var indexModule = {
     this.bindEvent();
   },
   bindEvent(){
-    Components['square'].init();
+    Components['squareInline'].init();
     let navbarLists = document.getElementsByClassName('navbar-list');
     if(!navbarLists || !navbarLists.length)
       return;
