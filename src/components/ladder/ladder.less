@@ -1,0 +1,78 @@
+.ladder{
+  width: 70px;
+  height: 60px;
+  // background: #e3e3e3;
+  display: flex;
+  align-items: flex-end;
+  &-block{
+    width: 10px;
+    height: 20px;
+    margin-right: 5px;
+    background: #E84B63;
+    &.first{
+      height: 10px;
+      animation: ladder-flex1 1500ms infinite linear;
+    }
+    &.sec{
+      height: 20px;
+      animation: ladder-flex2 1500ms infinite linear;
+    }
+    &.third{
+      height: 30px;
+    }
+    &.forth{
+      height: 40px;
+      animation: ladder-flex4 1500ms infinite linear;
+    }
+    &.fifth{
+      height: 50px;
+      margin-right: 0;
+      animation: ladder-flex5 1500ms infinite linear;
+    }
+  }
+}
+
+@keyframes ladder-flex1 {
+  0 {
+    height: 10px;
+  }
+  50% {
+    height: 50px;
+  }
+  100% {
+    height: 10px;
+  }
+}
+@keyframes ladder-flex2 {
+  0 {
+    height: 20px;
+  }
+  50% {
+    height: 40px;
+  }
+  100% {
+    height: 20px;
+  }
+}
+@keyframes ladder-flex4 {
+  0 {
+    height: 40px;
+  }
+  50% {
+    height: 20px;
+  }
+  100% {
+    height: 40px;
+  }
+}
+@keyframes ladder-flex5 {
+  0 {
+    height: 50px;
+  }
+  50% {
+    height: 10px;
+  }
+  100% {
+    height: 50px;
+  }
+}
