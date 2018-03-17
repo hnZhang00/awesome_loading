@@ -1,0 +1,63 @@
+.line{
+  // background: #e3e3e3;
+  &-block{
+    height: 30px;
+    display: flex;
+    &-inner{
+      width: 35px;
+      height: 3px;
+      background: #DA5653;
+      &.left{
+        transform: rotate(30deg);
+        animation: line-rotate-left 1500ms infinite linear;
+      }
+      &.right{
+        transform: rotate(-30deg);
+        animation: line-rotate-right 1500ms infinite linear;
+      }
+    }
+  }
+  &-text{
+    font-size: 20px;
+    text-align: center;
+    color: #DA5653;
+    opacity: 1;
+    animation: line-opacity 1500ms infinite linear;
+  }
+}
+
+@keyframes line-rotate-left {
+  0% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(30deg);
+  }
+}
+
+@keyframes line-rotate-right {
+  0% {
+    transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(-30deg);
+  }
+}
+@keyframes line-opacity {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+
+}
