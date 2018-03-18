@@ -5,18 +5,20 @@ import Circle from 'components/circle/circle';
 import Float from 'components/float/float';
 import Square from 'components/square/square';
 import SquareInline from 'components/squareInline/squareInline';
+import SquareBlock from 'components/squareBlock/squareBlock';
 import Ladder from 'components/ladder/ladder';
 import LadderBounce from 'components/ladderBounce/ladderBounce';
 import Line from 'components/line/line';
 
 export default {
-  types: [ 'cube', 'zoom', 'circle', 'float', 'square', 'squareInline', 'ladder', 'ladderBounce', 'line' ],
+  types: [ 'cube', 'zoom', 'circle', 'float', 'square', 'squareInline', 'squareBlock', 'ladder', 'ladderBounce', 'line' ],
   cube: new Cube(),
   zoom: new Zoom(),
   circle: new Circle(),
   float: new Float(),
   square: new Square(),
   squareInline: new SquareInline(),
+  squareBlock: new SquareBlock(),
   ladder: new Ladder(),
   ladderBounce: new LadderBounce(),
   line: new Line(),
