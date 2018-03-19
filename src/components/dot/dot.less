@@ -1,0 +1,92 @@
+.dot{
+  width: 30px;
+  height: 30px;
+  // background: #e3e3e3;
+  position: relative;
+  transform: rotate(-20deg);
+  animation: dot-rotate 6000ms infinite linear;
+  &-block{
+    width: 10px;
+    height: 10px;
+    border-radius: 100px;
+    position: absolute;
+    animation: dot-strech 6000ms infinite linear;
+    &.first{
+      top: 0;
+      left: -10px;
+      background: #EEBE67;
+      z-index: 1;
+    }
+    &.sec{
+      top: -20px;
+      left: 20px;
+      background: #E7568A;
+      transform: rotate(90deg);
+      transform-origin: 0 100%;
+      z-index: 2;
+    }
+    &.third{
+      top: 30px;
+      left: 10px;
+      background: #95D7E4;
+      transform: rotate(270deg);
+      transform-origin: 0 100%;
+      z-index: 3;
+    }
+    &.forth{
+      top: 10px;
+      left: 40px;
+      background: #57BFA5;
+      transform: rotate(180deg);
+      transform-origin: 0 100%;
+      z-index: 4;
+    }
+  }
+}
+
+@keyframes dot-rotate {
+  22% {
+    transform: rotate(-20deg);
+  }
+  25%, 47% {
+    transform: rotate(70deg);
+  }
+  50%, 72% {
+    transform: rotate(160deg);
+  }
+  75%, 97% {
+    transform: rotate(250deg);
+  }
+  100% {
+    transform: rotate(340deg);
+  }
+}
+@keyframes dot-strech {
+  0 {
+    width: 10px;
+  }
+  9% {
+    width: 50px;
+  }
+  18%, 25% {
+    width: 10px;
+  }
+  34% {
+    width: 50px;
+  }
+  43%, 50% {
+    width: 10px;
+  }
+  59% {
+    width: 50px;
+  }
+  68%, 75% {
+    width: 10px;
+  }
+  84% {
+    width: 50px;
+  }
+  95% {
+    width: 10px;
+  }
+}

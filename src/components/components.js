@@ -9,9 +9,10 @@ import SquareBlock from 'components/squareBlock/squareBlock';
 import Ladder from 'components/ladder/ladder';
 import LadderBounce from 'components/ladderBounce/ladderBounce';
 import Line from 'components/line/line';
+import Dot from 'components/dot/dot';
 
 export default {
-  types: [ 'cube', 'zoom', 'circle', 'float', 'square', 'squareInline', 'squareBlock', 'ladder', 'ladderBounce', 'line' ],
+  types: [ 'cube', 'zoom', 'circle', 'float', 'square', 'squareInline', 'squareBlock', 'ladder', 'ladderBounce', 'line', 'dot' ],
   cube: new Cube(),
   zoom: new Zoom(),
   circle: new Circle(),
@@ -22,4 +23,5 @@ export default {
   ladder: new Ladder(),
   ladderBounce: new LadderBounce(),
   line: new Line(),
+  dot: new Dot(),
 }
