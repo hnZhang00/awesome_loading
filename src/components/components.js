@@ -10,9 +10,10 @@ import Ladder from 'components/ladder/ladder';
 import LadderBounce from 'components/ladderBounce/ladderBounce';
 import Line from 'components/line/line';
 import Dot from 'components/dot/dot';
+import Eye from 'components/eye/eye';
 
 export default {
-  types: [ 'cube', 'zoom', 'circle', 'float', 'square', 'squareInline', 'squareBlock', 'ladder', 'ladderBounce', 'line', 'dot' ],
+  types: [ 'cube', 'zoom', 'circle', 'float', 'square', 'squareInline', 'squareBlock', 'ladder', 'ladderBounce', 'line', 'dot', 'eye' ],
   cube: new Cube(),
   zoom: new Zoom(),
   circle: new Circle(),
@@ -24,4 +25,5 @@ export default {
   ladderBounce: new LadderBounce(),
   line: new Line(),
   dot: new Dot(),
+  eye: new Eye(),
 }
