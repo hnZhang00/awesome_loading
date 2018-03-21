@@ -1,0 +1,56 @@
+@circleLoopSize: 50px;
+@circleLoopSpeed: 1s;
+
+.circleLoop{
+  width: @circleLoopSize * 1.4;
+  height: @circleLoopSize * 1.4;
+  position: relative;
+  &-block{
+    width: @circleLoopSize;
+    height: @circleLoopSize;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #E87722;
+  }
+}
+.circleLoop-loop(@n, @i: 1) when (@i <= @n) {
+  .circleLoop-block:nth-child(@{i}) {
+    animation: circleLoop-bounce 0.5s ease-in-out infinite alternate,
+               circleLoop-move 4s @i * @circleLoopSpeed infinite;
+  }
+  .circleLoop-loop(@n, @i+1)
+}
+.circleLoop-loop(4);
+
+@keyframes circleLoop-bounce {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.75);
+  }
+}
+@keyframes circleLoop-move {
+  0% {
+    top: 0;
+    left: 0;
+    background-color: #E87722;
+  }
+  25% {
+    top: 0;
+    left: 50%;
+    background-color: #A4D65E;
+  }
+  50% {
+    top: 50%;
+    left: 50%;
+    background-color: #69B3E7;
+  }
+  75% {
+    top: 50%;
+    left: 0;
+    background-color: #FFC845;
+  }
+}

@@ -1,13 +1,14 @@
-@size: 50px;
+@squareLoopSize: 50px;
+@squareLoopSpeed: 1s;
 
 .squareLoop{
-  width: @size*2;
-  height: @size*2;
+  width: @squareLoopSize*2;
+  height: @squareLoopSize*2;
   position: relative;
-  perspective: 1000px;
+  // perspective: 1000px;
   &-block {
-    height: @size;
-    width: @size;
+    height: @squareLoopSize;
+    width: @squareLoopSize;
     position: absolute;
     top: 0;
     left: 0;
@@ -15,11 +16,10 @@
   }
 }
 
-@speed: 1s;
 .squareLoop-loop(@n, @i: 1) when (@i =< @n) {
-  .squareLoop-block:nth-of-type(@{i}) {
+  .squareLoop-block:nth-child(@{i}) {
     animation: squareLoop-bounce 0.5s ease-in-out infinite alternate,
-               squareLoop-move 4s @i*@speed infinite;
+               squareLoop-move 4s @i*@squareLoopSpeed infinite;
   }
   .squareLoop-loop(@n, (@i + 1));
 }
