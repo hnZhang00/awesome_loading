@@ -9,7 +9,7 @@ var indexModule = {
     this.bindEvent();
   },
   bindEvent(){
-    Components['eye'].init();
+    Components['squareLoop'].init();
     let navbarLists = document.getElementsByClassName('navbar-list');
     if(!navbarLists || !navbarLists.length)
       return;

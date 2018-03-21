@@ -1,0 +1,58 @@
+@size: 50px;
+
+.squareLoop{
+  width: @size*2;
+  height: @size*2;
+  position: relative;
+  perspective: 1000px;
+  &-block {
+    height: @size;
+    width: @size;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #E87722;
+  }
+}
+
+@speed: 1s;
+.squareLoop-loop(@n, @i: 1) when (@i =< @n) {
+  .squareLoop-block:nth-of-type(@{i}) {
+    animation: squareLoop-bounce 0.5s ease-in-out infinite alternate,
+               squareLoop-move 4s @i*@speed infinite;
+  }
+  .squareLoop-loop(@n, (@i + 1));
+}
+.squareLoop-loop(4);
+
+@keyframes squareLoop-bounce {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.8);
+  }
+}
+
+@keyframes squareLoop-move {
+  0% {
+    top: 0;
+    left: 0;
+    background-color: #E87722;
+  }
+  25% {
+    top: 0;
+    left: 50%;
+    background-color: #A4D65E;
+  }
+  50% {
+    top: 50%;
+    left: 50%;
+    background-color: #69B3E7;
+  }
+  75% {
+    top: 50%;
+    left: 0;
+    background-color: #FFC845;
+  }
+}
